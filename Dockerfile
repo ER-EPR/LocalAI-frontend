@@ -16,6 +16,7 @@ WORKDIR /srv/app
 COPY --from=build /srv/app/ ./
 RUN chown -R node /srv/app
 RUN npm install -g serve
+RUN npm install http-proxy-middleware
 EXPOSE 3000
 USER node
 CMD ["/bin/sh", "./entrypoint.sh"]
