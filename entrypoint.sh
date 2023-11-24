@@ -2,7 +2,7 @@
 
 if [ -z "$API_HOST" ]
 then
-    API_HOST='http://ai.savorcare.com'
+    API_HOST='/v1'
 fi
 
 echo "REACT_APP_API_HOST=$API_HOST" >> ./.env
