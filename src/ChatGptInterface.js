@@ -46,7 +46,7 @@ const ChatGptInterface = () => {
         }),
       };
 
-      const response = await fetch(`${host}/v1/chat/completions`, requestOptions);
+      const response = await fetch(`${host}/chat/completions`, requestOptions);
 
       const reader = response.body.getReader();
       let partialData = "";
@@ -111,7 +111,7 @@ const ChatGptInterface = () => {
 
   const fetchModels = async () => {
     try {
-      const response = await fetch(`${host}/v1/models`);
+      const response = await fetch(`${host}/models`);
       const data = await response.json();
       setModels(data?.data || []);
     } catch (error) {
