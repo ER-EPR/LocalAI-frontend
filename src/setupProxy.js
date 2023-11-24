@@ -2,7 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    'http://ai.savorcare.com',
+    '/v1',
     createProxyMiddleware({
       target: 'http://ai.savorcare.com',
       changeOrigin: true,
