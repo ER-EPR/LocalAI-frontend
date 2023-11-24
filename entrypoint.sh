@@ -2,7 +2,7 @@
 
 if [ -z "$API_HOST" ]
 then
-    API_HOST='/v1'
+    API_HOST='/api'
 fi
 
 echo "REACT_APP_API_HOST=$API_HOST" >> ./.env
